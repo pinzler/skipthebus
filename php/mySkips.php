@@ -50,7 +50,7 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
     $lng1 = $lng - $lngrange;  
     $lng2 = $lng + $lngrange;    
 
-   echo "Trip to: ". $rowbig['destination'] . "<BR>";
+   echo "<div class='result'>Trip to: ". $rowbig['destination'] . "<BR>";
    echo $rowbig['leavedate'] . " " . $rowbig['leavetime'] . "<BR>";
    echo "Leave matches:<BR>";
 
@@ -96,7 +96,7 @@ echo " Home matches:<BR>";
       		echo "<BR>";
       	}
       }
-
+      echo "</div>";
 }
 
 function distance($lt1, $ln1, $lt2, $ln2) {
@@ -111,6 +111,7 @@ function distance($lt1, $ln1, $lt2, $ln2) {
 
 ?>
 <BR>
+<div id="add-trip">
 Add a trip:
 <form name="form" method="post" action="addTrip.php">
 Address in the Hamptons: <input name="dest" type="text" id="dest"> <BR>
@@ -139,6 +140,6 @@ Notes: <input name="note" type="text" id="note"> <BR>
 <input type="submit" name="Submit" value="Add trip!">
 
 </form>
-
+</div>
 
 <?php include "footer.php"; ?>

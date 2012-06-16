@@ -5,7 +5,8 @@
 
 <script>
 	$(function() {
-		$( "#leave_d" ).datepicker();
+		$( "#leave_d" ).datepicker({autoSize: false, dateFormat: "yy-mm-dd"});
+		$( "#home_d" ).datepicker({autoSize: false, dateFormat: "yy-mm-dd"});
 	});
 </script>
 
