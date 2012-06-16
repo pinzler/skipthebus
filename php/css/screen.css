@@ -57,13 +57,46 @@ a img {
   border: none;
 }
 
-/* line 12, ../../sass/partials/_base.scss */
-body {
-  background: #CCC;
-  color: #333;
+@font-face {
+  font-family: "Avril";
+  src: url('/php/css/fonts/arvil_sans-webfont.eot') format('embedded-opentype'), url('/php/css/fonts/arvil_sans-webfont.svg') format('svg'), url('/php/css/fonts/arvil_sans-webfont.ttf') format('truetype'), url('/php/css/fonts/arvil_sans-webfont.woff') format('woff');
 }
 
-/* line 20, ../../sass/screen.scss */
+@font-face {
+  font-family: "Copperplate";
+  src: url('/php/css/fonts/copperplate_gothic_light-webfont.eot') format('embedded-opentype'), url('/php/css/fonts/copperplate_gothic_light-webfont.svg') format('svg'), url('/php/css/fonts/copperplate_gothic_light-webfont.ttf') format('truetype'), url('/php/css/fonts/copperplate_gothic_light-webfont.woff') format('woff');
+}
+
+/* line 20, ../../sass/partials/_base.scss */
+body {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7dd1dd), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(#7dd1dd, #ffffff);
+  background-image: -moz-linear-gradient(#7dd1dd, #ffffff);
+  background-image: -o-linear-gradient(#7dd1dd, #ffffff);
+  background-image: -ms-linear-gradient(#7dd1dd, #ffffff);
+  background-image: linear-gradient(#7dd1dd, #ffffff);
+  color: #333;
+  font-family: "Copperplate", Arial, Helvetica, sans-serif;
+}
+
+/* line 29, ../../sass/partials/_base.scss */
+#forms form {
+  border-top: 1px solid #b1c818;
+  width: 300px;
+  float: left;
+  background: url("form-btn.png") no-repeat;
+  background-position: bottom right;
+}
+/* line 36, ../../sass/partials/_base.scss */
+#forms form:first-child {
+  margin-right: 10px;
+}
+/* line 40, ../../sass/partials/_base.scss */
+#forms form table {
+  padding: 10px;
+}
+
+/* line 22, ../../sass/screen.scss */
 body.bp {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -499,14 +532,14 @@ form.bp form.inline p {
   margin-bottom: 0;
 }
 
-/* line 36, ../../sass/screen.scss */
+/* line 38, ../../sass/screen.scss */
 body.two-col #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 38, ../../sass/screen.scss */
+/* line 40, ../../sass/screen.scss */
 body.two-col #header, body.two-col #footer {
   display: inline;
   float: left;
@@ -517,7 +550,7 @@ body.two-col #header, body.two-col #footer {
 * html body.two-col #header, * html body.two-col #footer {
   overflow-x: hidden;
 }
-/* line 40, ../../sass/screen.scss */
+/* line 42, ../../sass/screen.scss */
 body.two-col #sidebar {
   display: inline;
   float: left;
@@ -528,7 +561,7 @@ body.two-col #sidebar {
 * html body.two-col #sidebar {
   overflow-x: hidden;
 }
-/* line 44, ../../sass/screen.scss */
+/* line 46, ../../sass/screen.scss */
 body.two-col #content {
   display: inline;
   float: left;

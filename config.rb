@@ -4,7 +4,7 @@
 http_path = "/"
 css_dir = "php/css"
 sass_dir = "sass"
-images_dir = "php/images"
+#images_dir = "php/images"
 javascripts_dir = "js"
 
 # You can select your preferred output style here (can be overridden via the command line):

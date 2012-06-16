@@ -1,3 +1,11 @@
+// Fonts
+@include font-face("Avril", font-files("arvil_sans-webfont.eot", "arvil_sans-webfont.svg", "arvil_sans-webfont.ttf", "arvil_sans-webfont.woff"));
+@include font-face("Copperplate", font-files("copperplate_gothic_light-webfont.eot", "copperplate_gothic_light-webfont.svg", "copperplate_gothic_light-webfont.ttf", "copperplate_gothic_light-webfont.woff"));
+
+// vars
+$blue:#7dd1dd;
+$green:#b1c818;
+
 // Here is where you can define your constants for your application and to configure the blueprint framework.
 // Feel free to delete these if you want keep the defaults:
 
@@ -10,8 +18,29 @@ $blueprint-grid-margin: 10px;
 $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin;
 
 body{
-	background:#CCC;
+	@include background-image(linear-gradient($blue, white)); 
 	color:#333;
+	font-family:"Copperplate", Arial, Helvetica, sans-serif;
 }
 
 @import "blueprint/form";
+
+#forms{
+	form{
+		border-top:1px solid $green;
+		width:300px;
+		float:left;
+		background:url('form-btn.png') no-repeat;
+		background-position:bottom right;
+
+		&:first-child{
+			margin-right:10px;
+		}
+
+		table{
+			padding:10px;
+		}
+	}
+
+}
+
