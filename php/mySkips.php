@@ -95,10 +95,10 @@ echo "<div class='trip'><span class='date'>" . date('F j, Y', strtotime($rowbig[
 $count=mysql_num_rows($result);
 
     if ($count == 0)
-        echo " <h1>No matching trips from the Hamptons</h1><BR>";
+        echo " <h1>No matching trips from the Hamptons</h1>";
       
 else {
-	echo " <h1>Matching trips from the Hamptons:</h1><BR>";
+	echo " <h1>Matching trips from the Hamptons:</h1>";
 
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
