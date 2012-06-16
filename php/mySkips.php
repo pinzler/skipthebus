@@ -72,7 +72,8 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
       	{ 
-      		echo "<div class='req'><a href='contact.php?type=leave&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes: ". $row['note'] . "</div>";
+      		$mess = "'A message has been sent to this user.'";
+          echo "<div class='req'><a onclick='alert(".$mess.")' href='contact.php?type=leave&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes: ". $row['note'] . "</div>";
       		if ($row['car']) 
 				echo " (Has a car)";
       		echo "</div>";
@@ -102,7 +103,8 @@ else {
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
       	{ 
-      		echo "<div class='req'><a href='contact.php?type=home&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes: ". $row['note'] ."</div>";  
+      		$mess = "'A message has been sent to this user.'";
+          echo "<div class='req'><a onclick='alert(".$mess.")' href='contact.php?type=home&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes: ". $row['note'] ."</div>";  
 			if ($row['car']) 
 				echo " (Has a car)";
       		echo "</div>";
