@@ -23,12 +23,13 @@ body{
 }
 
 #footer{
-	background:url('../images/sign.png') no-repeat;
+	background:url('../images/car.gif') no-repeat;
 	background-position:bottom right;
 	height:106px;
 	width:100%;
 	position:fixed;
 	bottom:0;
+	text-align:right;
 }
 
 @import "blueprint/form";

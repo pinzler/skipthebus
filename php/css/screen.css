@@ -81,21 +81,22 @@ body {
 
 /* line 25, ../../sass/partials/_base.scss */
 #footer {
-  background: url("../images/sign.png") no-repeat;
+  background: url("../images/car.gif") no-repeat;
   background-position: bottom right;
   height: 106px;
   width: 100%;
   position: fixed;
   bottom: 0;
+  text-align: right;
 }
 
-/* line 36, ../../sass/partials/_base.scss */
+/* line 37, ../../sass/partials/_base.scss */
 #header {
   position: relative;
   background: url("../images/helicopter2.gif") no-repeat;
   background-position: 150px 30px;
 }
-/* line 40, ../../sass/partials/_base.scss */
+/* line 41, ../../sass/partials/_base.scss */
 #header #logo {
   text-indent: 110%;
   white-space: nowrap;
@@ -106,7 +107,7 @@ body {
   width: 300px;
   height: 207px;
 }
-/* line 44, ../../sass/partials/_base.scss */
+/* line 45, ../../sass/partials/_base.scss */
 #header .cloud {
   text-indent: 110%;
   white-space: nowrap;
@@ -120,7 +121,7 @@ body {
   top: 0;
   left: 300px;
 }
-/* line 51, ../../sass/partials/_base.scss */
+/* line 52, ../../sass/partials/_base.scss */
 #header #sms {
   position: absolute;
   right: 0;
@@ -130,35 +131,35 @@ body {
   color: white;
   font-size: 20px;
 }
-/* line 60, ../../sass/partials/_base.scss */
+/* line 61, ../../sass/partials/_base.scss */
 #header #sms p {
   padding: 15px 30px 0px 50px;
 }
-/* line 65, ../../sass/partials/_base.scss */
+/* line 66, ../../sass/partials/_base.scss */
 #header #description {
   position: absolute;
   right: 20px;
   top: 120px;
   width: 590px;
 }
-/* line 71, ../../sass/partials/_base.scss */
+/* line 72, ../../sass/partials/_base.scss */
 #header #description p {
   color: grey;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 15px;
   line-height: 24px;
 }
-/* line 78, ../../sass/partials/_base.scss */
+/* line 79, ../../sass/partials/_base.scss */
 #header #description p .bold {
   font-weight: bold;
 }
 
-/* line 86, ../../sass/partials/_base.scss */
+/* line 87, ../../sass/partials/_base.scss */
 #wrap {
   padding: 20px 0 40px 0;
   margin-left: 150px;
 }
-/* line 93, ../../sass/partials/_base.scss */
+/* line 94, ../../sass/partials/_base.scss */
 #wrap #forms form {
   border-top: 1px solid #b1c818;
   width: 331px;
@@ -239,32 +240,32 @@ body {
   width: 390px;
   height: 250px;
 }
-/* line 103, ../../sass/partials/_base.scss */
+/* line 104, ../../sass/partials/_base.scss */
 #wrap #forms form:first-child {
   margin-right: 50px;
 }
-/* line 107, ../../sass/partials/_base.scss */
+/* line 108, ../../sass/partials/_base.scss */
 #wrap #forms form input {
   width: 180px !important;
 }
-/* line 111, ../../sass/partials/_base.scss */
+/* line 112, ../../sass/partials/_base.scss */
 #wrap #forms form input[type='submit'] {
   width: auto !important;
 }
-/* line 116, ../../sass/partials/_base.scss */
+/* line 117, ../../sass/partials/_base.scss */
 #wrap #forms form .form {
   width: 78px;
   font-weight: bold;
 }
-/* line 121, ../../sass/partials/_base.scss */
+/* line 122, ../../sass/partials/_base.scss */
 #wrap #forms form .divider {
   padding: 0 10px;
 }
-/* line 125, ../../sass/partials/_base.scss */
+/* line 126, ../../sass/partials/_base.scss */
 #wrap #forms form .label {
   text-align: right;
 }
-/* line 130, ../../sass/partials/_base.scss */
+/* line 131, ../../sass/partials/_base.scss */
 #wrap #forms form table {
   padding: 10px;
   background: white;
@@ -272,7 +273,7 @@ body {
   border-right: 1px solid #b1c818;
 }
 
-/* line 141, ../../sass/partials/_base.scss */
+/* line 142, ../../sass/partials/_base.scss */
 h3 {
   font-family: "Avril";
   font-weight: bold;
@@ -280,53 +281,53 @@ h3 {
   margin-bottom: 10px;
 }
 
-/* line 150, ../../sass/partials/_base.scss */
+/* line 151, ../../sass/partials/_base.scss */
 #ui-datepicker-div {
   font-size: 10px;
 }
 
-/* line 154, ../../sass/partials/_base.scss */
+/* line 155, ../../sass/partials/_base.scss */
 #add-trip {
   background: white;
   border: 1px solid #b1c818;
   width: 600px;
   padding: 10px;
 }
-/* line 160, ../../sass/partials/_base.scss */
+/* line 161, ../../sass/partials/_base.scss */
 #add-trip form {
   text-align: right;
 }
-/* line 164, ../../sass/partials/_base.scss */
+/* line 165, ../../sass/partials/_base.scss */
 #add-trip form input {
   width: 180px !important;
 }
-/* line 168, ../../sass/partials/_base.scss */
+/* line 169, ../../sass/partials/_base.scss */
 #add-trip form input[type='submit'] {
   width: auto !important;
 }
-/* line 173, ../../sass/partials/_base.scss */
+/* line 174, ../../sass/partials/_base.scss */
 #add-trip form td {
   vertical-align: top;
   padding: 3px 0;
 }
-/* line 177, ../../sass/partials/_base.scss */
+/* line 178, ../../sass/partials/_base.scss */
 #add-trip form .label {
   width: 400px;
   text-align: right;
 }
-/* line 182, ../../sass/partials/_base.scss */
+/* line 183, ../../sass/partials/_base.scss */
 #add-trip form .sample {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #ccc;
   font-style: italic;
   font-weight: normal;
 }
-/* line 189, ../../sass/partials/_base.scss */
+/* line 190, ../../sass/partials/_base.scss */
 #add-trip form .divider {
   padding: 0 10px;
 }
 
-/* line 195, ../../sass/partials/_base.scss */
+/* line 196, ../../sass/partials/_base.scss */
 .result {
   font-family: Georgia, "Times New Roman", Times, serif;
   list-style-type: none;
@@ -336,35 +337,35 @@ h3 {
   width: 600px;
   padding: 10px;
 }
-/* line 204, ../../sass/partials/_base.scss */
+/* line 205, ../../sass/partials/_base.scss */
 .result .notes {
   font-style: italic;
   color: grey;
 }
-/* line 209, ../../sass/partials/_base.scss */
+/* line 210, ../../sass/partials/_base.scss */
 .result .date {
   font-style: italic;
 }
-/* line 213, ../../sass/partials/_base.scss */
+/* line 214, ../../sass/partials/_base.scss */
 .result .trip {
   background: #b1c818;
   margin-top: 20px;
   padding: 3px;
   color: white;
 }
-/* line 220, ../../sass/partials/_base.scss */
+/* line 221, ../../sass/partials/_base.scss */
 .result .trip:first-child {
   margin: 0;
   border-top: 0px dotted #b1c818;
 }
-/* line 225, ../../sass/partials/_base.scss */
+/* line 226, ../../sass/partials/_base.scss */
 .result h1 {
   color: black;
   font-family: "Avril";
   font-size: 30px;
   margin-top: 5px;
 }
-/* line 232, ../../sass/partials/_base.scss */
+/* line 233, ../../sass/partials/_base.scss */
 .result a {
   text-decoration: none;
   color: #b1c818;
