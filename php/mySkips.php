@@ -127,29 +127,75 @@ function distance($lt1, $ln1, $lt2, $ln2) {
 <div id="add-trip">
 <h3>Add a trip:</h3>
 <form name="form" method="post" action="addTrip.php">
-Full address in the Hamptons: <input name="dest" type="text" id="dest"> <BR>
-Departure Date: <input name="leave_d" type="text" id="leave_d"> <BR> 
-Departure Time: <select name="leave_t" id="leave_t"> 
-<option value="Morning">Morning</option>
-<option value="Afternoon">Afternoon</option>
-<option value="Evening">Evening</option>
-<option value="Fringe">Fringe</option>
-<option value="Flexible">Flexible</option>
-</select><BR>
-Return Date: <input name="home_d" type="text" id="home_d"><BR>
-Return Time: <select name="home_t" id="home_t">
-<option value="Morning">Morning</option>
-<option value="Afternoon">Afternoon</option>
-<option value="Evening">Evening</option>
-<option value="Fringe">Late Night</option>
-<option value="Flexible">Flexible</option>
-</select><BR>
-Distance from address you are willing to travel (miles): <input name="radius" type="text" id="radius"><BR>
-Do you own a car or are you planning on renting one? <select name="car" id="car">
-<option value="No">No</option>
-<option value="Yes">Yes</option>
-</select><BR>
-Notes: <input name="note" type="text" id="note"> <BR> 
+  <table>
+    <tr> 
+      <td class="label">Full address in the Hamptons<br/><span class="sample">(111 Main Street, East Hampton, NY)</span></td> 
+      <td><span class="divider">:</span></td>
+      <td><input name="dest" type="text" id="dest"></td>
+    </tr>
+
+    <tr> 
+      <td class="label">Departure Date</td> 
+      <td><span class="divider">:</span></td>
+      <td><input name="leave_d" type="text" id="leave_d"></td>
+    </tr>
+
+    <tr> 
+      <td class="label">Departure Time</td> 
+      <td><span class="divider">:</span></td>
+      <td><select name="leave_t" id="leave_t">
+          <option value="Morning">Morning</option>
+          <option value="Afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+          <option value="Fringe">Fringe</option>
+          <option value="Flexible">Flexible</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr> 
+      <td class="label">Return Date</td> 
+      <td><span class="divider">:</span></td>
+      <td><input name="home_d" type="text" id="home_d"></td>
+    </tr>
+
+    <tr> 
+      <td class="label">Departure Time</td> 
+      <td><span class="divider">:</span></td>
+      <td><select name="home_t" id="home_t">
+          <option value="Morning">Morning</option>
+          <option value="Afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+          <option value="Fringe">Fringe</option>
+          <option value="Flexible">Flexible</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr> 
+      <td class="label">Distance from destination you are willing to travel (miles)</td> 
+      <td><span class="divider">:</span></td>
+      <td><input name="radius" type="text" id="radius"></td>
+    </tr>
+
+    <tr> 
+      <td class="label">Do you own a car or are you planning on renting one?</td> 
+      <td><span class="divider"> </span></td>
+      <td> 
+        <select name="car" id="car">
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr> 
+      <td class="label">Notes</td> 
+      <td><span class="divider">:</span></td>
+      <td><input name="note" type="text" id="note"></td>
+    </tr>
+
+</table>
 <input type="submit" name="Submit" value="Add trip!">
 
 </form>
