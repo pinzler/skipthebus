@@ -66,7 +66,7 @@ $note=$_REQUEST['note'];
     if ($leave_t == "Flexible") 
       $query = "select * from $tbl_name where email<>'$email' and leavedate = '$leave_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
     else
-      $query = "select * from $tbl_name where email<>'$email' and leavedate = '$leave_d' and leavetime ='$leave_t' OR leavetime = 'Flexible' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+      $query = "select * from $tbl_name where email<>'$email' and leavedate = '$leave_d' and (leavetime ='$leave_t' OR leavetime = 'Flexible') AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
 	  $result=mysql_query($query);
     
 	
@@ -89,7 +89,7 @@ $note=$_REQUEST['note'];
 	if ($home_t == "Flexible") 
     $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
 	else
-    $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' and hometime ='$home_t' OR hometime = 'Flexible' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+    $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' and (hometime ='$home_t' OR hometime = 'Flexible') AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
   
   $result=mysql_query($query);
     
@@ -118,7 +118,7 @@ header("location:mySkips.php");
 
 
 function sendSMS($number, $isHome, $client) {
-	if ($isHome)
+	if (!$isHome)
 		$msg = "You have a new SkipTheBus.com match on your trip to the Hamptons!";
 	else
 		$msg = "You have a new SkipTheBus.com match on your trip back from the Hamptons!";

@@ -58,7 +58,7 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
     if ($leave_t == "Flexible") 
       $query = "select * from $tbl_name where email <> '$email' and leavedate = '$leave_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
 	  else
-      $query = "select * from $tbl_name where email <> '$email' and leavedate = '$leave_d' and leavetime ='$leave_t' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+      $query = "select * from $tbl_name where email <> '$email' and leavedate = '$leave_d' and (leavetime ='$leave_t' OR leavetime = 'Flexible') AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
     
     $result=mysql_query($query);
     
@@ -83,7 +83,7 @@ echo " Home matches:<BR>";
 	if ($leave_t == "Flexible") 
     $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
   else
-    $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' and hometime ='$home_t' OR hometime = 'Flexible' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+    $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' and (hometime ='$home_t' OR hometime = 'Flexible') AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
 	$result=mysql_query($query);
     
 	
