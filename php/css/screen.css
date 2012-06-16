@@ -91,8 +91,10 @@ body {
 /* line 35, ../../sass/partials/_base.scss */
 #header {
   position: relative;
+  background: url("../images/helicopter2.gif") no-repeat;
+  background-position: 100px 50px;
 }
-/* line 37, ../../sass/partials/_base.scss */
+/* line 39, ../../sass/partials/_base.scss */
 #header #logo {
   text-indent: 110%;
   white-space: nowrap;
@@ -103,7 +105,7 @@ body {
   width: 300px;
   height: 207px;
 }
-/* line 41, ../../sass/partials/_base.scss */
+/* line 43, ../../sass/partials/_base.scss */
 #header #sms {
   position: absolute;
   right: 0;
@@ -113,35 +115,35 @@ body {
   color: white;
   font-size: 20px;
 }
-/* line 50, ../../sass/partials/_base.scss */
+/* line 52, ../../sass/partials/_base.scss */
 #header #sms p {
   padding: 15px 30px 0px 50px;
 }
-/* line 55, ../../sass/partials/_base.scss */
+/* line 57, ../../sass/partials/_base.scss */
 #header #description {
   position: absolute;
   right: 20px;
   top: 120px;
   width: 590px;
 }
-/* line 61, ../../sass/partials/_base.scss */
+/* line 63, ../../sass/partials/_base.scss */
 #header #description p {
   color: grey;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 15px;
   line-height: 24px;
 }
-/* line 68, ../../sass/partials/_base.scss */
+/* line 70, ../../sass/partials/_base.scss */
 #header #description p .bold {
   font-weight: bold;
 }
 
-/* line 76, ../../sass/partials/_base.scss */
+/* line 78, ../../sass/partials/_base.scss */
 #wrap {
   padding-top: 20px;
   margin-left: 150px;
 }
-/* line 83, ../../sass/partials/_base.scss */
+/* line 85, ../../sass/partials/_base.scss */
 #wrap #forms form {
   border-top: 1px solid #b1c818;
   width: 331px;
@@ -222,32 +224,32 @@ body {
   width: 390px;
   height: 250px;
 }
-/* line 93, ../../sass/partials/_base.scss */
+/* line 95, ../../sass/partials/_base.scss */
 #wrap #forms form:first-child {
   margin-right: 50px;
 }
-/* line 97, ../../sass/partials/_base.scss */
+/* line 99, ../../sass/partials/_base.scss */
 #wrap #forms form input {
   width: 180px !important;
 }
-/* line 101, ../../sass/partials/_base.scss */
+/* line 103, ../../sass/partials/_base.scss */
 #wrap #forms form input[type='submit'] {
   width: auto !important;
 }
-/* line 106, ../../sass/partials/_base.scss */
+/* line 108, ../../sass/partials/_base.scss */
 #wrap #forms form .form {
   width: 78px;
   font-weight: bold;
 }
-/* line 111, ../../sass/partials/_base.scss */
+/* line 113, ../../sass/partials/_base.scss */
 #wrap #forms form .divider {
   padding: 0 10px;
 }
-/* line 115, ../../sass/partials/_base.scss */
+/* line 117, ../../sass/partials/_base.scss */
 #wrap #forms form .label {
   text-align: right;
 }
-/* line 120, ../../sass/partials/_base.scss */
+/* line 122, ../../sass/partials/_base.scss */
 #wrap #forms form table {
   padding: 10px;
   background: white;
