@@ -15,6 +15,15 @@ body{
 	@include background-image(linear-gradient($blue, white)); 
 	color:#333;
 	font-family:"Copperplate", Arial, Helvetica, sans-serif;
+
+}
+
+#footer{
+	background:url('../images/sign.png') no-repeat;
+	height:200px;
+	width:100%;
+	position:absolute;
+	bottom:0;
 }
 
 @import "blueprint/form";
@@ -22,7 +31,7 @@ body{
 #header{
 	position:relative;
 	#logo{
-		@include replace-text-with-dimensions('../images/logo.png')
+		@include replace-text-with-dimensions('logo.png')
 	}
 
 	#sms{
@@ -41,12 +50,14 @@ body{
 }
 
 #wrap{
-	width:940px;
-	margin:0 auto;
-	padding-top:80px;
+	// width:940px;
+	// margin:0 auto;
+	padding-top:20px;
+	margin-left:150px;
 
 	#forms{
 		form{
+			@include blueprint-form-sizes(20px);
 			@include blueprint-form;
 			border-top:1px solid $green;
 			width:331px;
@@ -56,11 +67,29 @@ body{
 			padding-bottom:44px;
 
 			&:first-child{
-				margin-right:10px;
+				margin-right:50px;
 			}
 
-			input{
+			input {
+				width:180px !important;
+			}
 
+			input[type='submit']{
+				// @include sassy-button;
+				width:auto !important;
+			}
+
+			.form{
+				width:78px;
+				font-weight:bold;
+			}
+
+			.divider{
+				padding:0 10px;
+			}
+
+			.label{
+				text-align:right;
 			}
 
 

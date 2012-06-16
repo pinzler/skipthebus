@@ -59,12 +59,12 @@ a img {
 
 @font-face {
   font-family: "Avril";
-  src: url('/php/css/fonts/arvil_sans-webfont.eot') format('embedded-opentype'), url('/php/css/fonts/arvil_sans-webfont.svg') format('svg'), url('/php/css/fonts/arvil_sans-webfont.ttf') format('truetype'), url('/php/css/fonts/arvil_sans-webfont.woff') format('woff');
+  src: url('fonts/arvil_sans-webfont.eot') format('embedded-opentype'), url('fonts/arvil_sans-webfont.svg') format('svg'), url('fonts/arvil_sans-webfont.ttf') format('truetype'), url('fonts/arvil_sans-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: "Copperplate";
-  src: url('/php/css/fonts/copperplate_gothic_light-webfont.eot') format('embedded-opentype'), url('/php/css/fonts/copperplate_gothic_light-webfont.svg') format('svg'), url('/php/css/fonts/copperplate_gothic_light-webfont.ttf') format('truetype'), url('/php/css/fonts/copperplate_gothic_light-webfont.woff') format('woff');
+  src: url('fonts/copperplate_gothic_light-webfont.eot') format('embedded-opentype'), url('fonts/copperplate_gothic_light-webfont.svg') format('svg'), url('fonts/copperplate_gothic_light-webfont.ttf') format('truetype'), url('fonts/copperplate_gothic_light-webfont.woff') format('woff');
 }
 
 /* line 14, ../../sass/partials/_base.scss */
@@ -79,22 +79,31 @@ body {
   font-family: "Copperplate", Arial, Helvetica, sans-serif;
 }
 
-/* line 22, ../../sass/partials/_base.scss */
+/* line 21, ../../sass/partials/_base.scss */
+#footer {
+  background: url("../images/sign.png") no-repeat;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 31, ../../sass/partials/_base.scss */
 #header {
   position: relative;
 }
-/* line 24, ../../sass/partials/_base.scss */
+/* line 33, ../../sass/partials/_base.scss */
 #header #logo {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  background-image: url('/php/images/../images/logo.png?1339864696');
+  background-image: url('../images/logo.png?1339864696');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 300px;
   height: 207px;
 }
-/* line 28, ../../sass/partials/_base.scss */
+/* line 37, ../../sass/partials/_base.scss */
 #header #sms {
   position: absolute;
   right: 0;
@@ -104,18 +113,17 @@ body {
   color: white;
   font-size: 20px;
 }
-/* line 37, ../../sass/partials/_base.scss */
+/* line 46, ../../sass/partials/_base.scss */
 #header #sms p {
   padding: 15px 30px 0px 50px;
 }
 
-/* line 43, ../../sass/partials/_base.scss */
+/* line 52, ../../sass/partials/_base.scss */
 #wrap {
-  width: 940px;
-  margin: 0 auto;
-  padding-top: 80px;
+  padding-top: 20px;
+  margin-left: 150px;
 }
-/* line 49, ../../sass/partials/_base.scss */
+/* line 59, ../../sass/partials/_base.scss */
 #wrap #forms form {
   border-top: 1px solid #b1c818;
   width: 331px;
@@ -123,6 +131,15 @@ body {
   background: url("../images/form-btm.png") no-repeat;
   background-position: bottom right;
   padding-bottom: 44px;
+}
+/* line 44, ../../../../../.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#wrap #forms form input.text, #wrap #forms form input.title, #wrap #forms form input[type=email], #wrap #forms form input[type=text], #wrap #forms form input[type=password] {
+  width: 20px;
+}
+/* line 46, ../../../../../.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
+#wrap #forms form textarea {
+  width: 390px;
+  height: 250px;
 }
 /* line 18, ../../../../../.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
 #wrap #forms form label {
@@ -187,11 +204,32 @@ body {
   width: 390px;
   height: 250px;
 }
-/* line 58, ../../sass/partials/_base.scss */
+/* line 69, ../../sass/partials/_base.scss */
 #wrap #forms form:first-child {
-  margin-right: 10px;
+  margin-right: 50px;
 }
-/* line 67, ../../sass/partials/_base.scss */
+/* line 73, ../../sass/partials/_base.scss */
+#wrap #forms form input {
+  width: 180px !important;
+}
+/* line 77, ../../sass/partials/_base.scss */
+#wrap #forms form input[type='submit'] {
+  width: auto !important;
+}
+/* line 82, ../../sass/partials/_base.scss */
+#wrap #forms form .form {
+  width: 78px;
+  font-weight: bold;
+}
+/* line 87, ../../sass/partials/_base.scss */
+#wrap #forms form .divider {
+  padding: 0 10px;
+}
+/* line 91, ../../sass/partials/_base.scss */
+#wrap #forms form .label {
+  text-align: right;
+}
+/* line 96, ../../sass/partials/_base.scss */
 #wrap #forms form table {
   padding: 10px;
   background: white;

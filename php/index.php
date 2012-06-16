@@ -8,18 +8,18 @@
 		<td colspan="3"><strong>Register </strong></td>
 	</tr>
 	<tr>
-		<td width="78">E-mail</td>
-		<td width="6">:</td>
+		<td class="label">E-mail</td>
+		<td><span class="divider">:</span></td>
 		<td width="294"><input name="email" type="text" id="email"></td>
 	</tr>
 	<tr>
-		<td width="78">Mobile Phone</td>
-		<td width="6">:</td>
+		<td class="label">Mobile Phone</td>
+		<td><span class="divider">:</span></td>
 		<td width="294"><input name="phone" type="text" id="phone"></td>
 	</tr>
 	<tr>
-		<td>Password</td>
-		<td>:</td>
+		<td class="label">Password</td>
+		<td><span class="divider">:</span></td>
 		<td><input name="password" type="password" id="password"></td>
 	</tr>
 	<tr>
@@ -37,13 +37,13 @@
 		<td colspan="3"><strong>Member Login </strong></td>
 	</tr>
 	<tr>
-		<td width="78">E-mail</td>
-		<td width="6">:</td>
+		<td class="label">E-mail</td>
+		<td><span class="divider">:</span></td>
 		<td width="294"><input name="email" type="text" id="email"></td>
 	</tr>
 	<tr>
-		<td>Password</td>
-		<td>:</td>
+		<td class="label">Password</td>
+		<td><span class="divider">:</span></td>
 		<td><input name="password" type="password" id="password"></td>
 	</tr>
 	<tr>
