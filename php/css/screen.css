@@ -79,21 +79,39 @@ body {
   font-family: "Copperplate", Arial, Helvetica, sans-serif;
 }
 
-/* line 29, ../../sass/partials/_base.scss */
+/* line 28, ../../sass/partials/_base.scss */
+#sms {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  height: 72px;
+  background: url("../images/sms.png") no-repeat;
+  color: white;
+}
+
+/* line 37, ../../sass/partials/_base.scss */
+#forms {
+  margin-top: 80px;
+}
+/* line 39, ../../sass/partials/_base.scss */
 #forms form {
   border-top: 1px solid #b1c818;
-  width: 300px;
+  width: 331px;
   float: left;
-  background: url("form-btn.png") no-repeat;
+  background: url("../images/form-btm.png") no-repeat;
   background-position: bottom right;
+  padding-bottom: 44px;
 }
-/* line 36, ../../sass/partials/_base.scss */
+/* line 47, ../../sass/partials/_base.scss */
 #forms form:first-child {
   margin-right: 10px;
 }
-/* line 40, ../../sass/partials/_base.scss */
+/* line 53, ../../sass/partials/_base.scss */
 #forms form table {
   padding: 10px;
+  background: white;
+  border-left: 1px solid #b1c818;
+  border-right: 1px solid #b1c818;
 }
 
 /* line 22, ../../sass/screen.scss */

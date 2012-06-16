@@ -25,20 +25,36 @@ body{
 
 @import "blueprint/form";
 
+#sms{
+	position:absolute;
+	right:0;
+	top:30px;
+	height:72px;
+	background:url('../images/sms.png') no-repeat;
+	color:white;
+}
+
 #forms{
+	margin-top:80px;
 	form{
 		border-top:1px solid $green;
-		width:300px;
+		width:331px;
 		float:left;
-		background:url('form-btn.png') no-repeat;
+		background:url('../images/form-btm.png') no-repeat;
 		background-position:bottom right;
+		padding-bottom:44px;
 
 		&:first-child{
 			margin-right:10px;
 		}
 
+
+
 		table{
 			padding:10px;
+			background:white;
+			border-left:1px solid $green;
+			border-right:1px solid $green;
 		}
 	}
 
