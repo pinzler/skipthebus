@@ -21,7 +21,7 @@ mysql_select_db("$db_name")or die("cannot select DB");
 
 $email=$_SESSION['myusername'];
 
-echo "<h3>Welcome ".$email."!</h3><BR>";
+echo "<h3>Welcome ".$email."!</h3><ul>";
 
 $query = "select * from $tbl_name where email = '$email'";
 $resultbig=mysql_query($query);
@@ -50,9 +50,9 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
     $lng1 = $lng - $lngrange;  
     $lng2 = $lng + $lngrange;    
 
-   echo "<div class='result'>Trip to: ". $rowbig['destination'] . "<BR>";
-   echo $rowbig['leavedate'] . " " . $rowbig['leavetime'] . "<BR>";
-   echo "Leave matches:<BR>";
+   echo "<li class='result'>Trip to: <span class='destination'>". $rowbig['destination'] . "</span><BR>";
+   echo "<span class='date'>"$rowbig['leavedate'] . " " . $rowbig['leavetime'] . "</span><BR>";
+   echo "<h1>Matching trips to the Hamptons:</h1>";
 
 // check for other leaves that match
     if ($leave_t == "Flexible") 
@@ -66,7 +66,7 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
       	{ 
-      		echo "<a href='contact.php?type=leave&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ." ". $row['note'];
+      		echo "<a href='contact.php?type=leave&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ." Notes:". $row['note'];
       		if ($row['car']) 
 				echo " (Has a car)";
       		echo "<BR>";
@@ -78,7 +78,7 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
 
 echo $rowbig['homedate'] . " " . $rowbig['hometime'] . "<BR>";
    
-echo " Home matches:<BR>";
+echo " <h1>Matching trips from the Hamptons:</h1><BR>";
 // check for other homes that match
 	if ($leave_t == "Flexible") 
     $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
@@ -90,13 +90,13 @@ echo " Home matches:<BR>";
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
       	{ 
-      		echo "<a href='contact.php?type=home&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ." ". $row['note'];  
+      		echo "<a href='contact.php?type=home&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ." Notes:". $row['note'];  
 			if ($row['car']) 
 				echo " (Has a car)";
       		echo "<BR>";
       	}
       }
-      echo "</div>";
+      echo "</li>";
 }
 
 function distance($lt1, $ln1, $lt2, $ln2) {
@@ -110,7 +110,7 @@ function distance($lt1, $ln1, $lt2, $ln2) {
 
 
 ?>
-<BR>
+</ul>
 <div id="add-trip">
 Add a trip:
 <form name="form" method="post" action="addTrip.php">
