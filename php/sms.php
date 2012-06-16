@@ -31,7 +31,7 @@ else if (date("H") > 5) $leave_t = "Morning";
 else $leave_t = "Fringe";
 
 if (strtolower($body) == "now")
-	$query = "select * from $tbl_name where leavedate = '$leave_d' and leavetime ='$leave_t'";
+	$query = "select * from $tbl_name where leavedate = '$leave_d' and leavetime ='$leave_t' or leavetime = 'Flexible'";
 else if (strtolower($body) == "today")
 	$query = "select * from $tbl_name where leavedate = '$leave_d'";
 else
