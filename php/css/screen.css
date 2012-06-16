@@ -80,21 +80,43 @@ body {
 }
 
 /* line 28, ../../sass/partials/_base.scss */
-#sms {
+#header {
+  position: relative;
+}
+/* line 30, ../../sass/partials/_base.scss */
+#header #logo {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url('/php/images/../images/logo.png?1339864696');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 300px;
+  height: 207px;
+}
+/* line 34, ../../sass/partials/_base.scss */
+#header #sms {
   position: absolute;
   right: 0;
   top: 30px;
   height: 72px;
   background: url("../images/sms.png") no-repeat;
   color: white;
+  font-size: 20px;
+}
+/* line 43, ../../sass/partials/_base.scss */
+#header #sms p {
+  padding: 15px 30px 0px 50px;
 }
 
-/* line 37, ../../sass/partials/_base.scss */
-#forms {
-  margin-top: 80px;
+/* line 49, ../../sass/partials/_base.scss */
+#wrap {
+  width: 940px;
+  margin: 0 auto;
+  padding-top: 80px;
 }
-/* line 39, ../../sass/partials/_base.scss */
-#forms form {
+/* line 55, ../../sass/partials/_base.scss */
+#wrap #forms form {
   border-top: 1px solid #b1c818;
   width: 331px;
   float: left;
@@ -102,19 +124,19 @@ body {
   background-position: bottom right;
   padding-bottom: 44px;
 }
-/* line 47, ../../sass/partials/_base.scss */
-#forms form:first-child {
+/* line 63, ../../sass/partials/_base.scss */
+#wrap #forms form:first-child {
   margin-right: 10px;
 }
-/* line 53, ../../sass/partials/_base.scss */
-#forms form table {
+/* line 69, ../../sass/partials/_base.scss */
+#wrap #forms form table {
   padding: 10px;
   background: white;
   border-left: 1px solid #b1c818;
   border-right: 1px solid #b1c818;
 }
 
-/* line 22, ../../sass/screen.scss */
+/* line 23, ../../sass/screen.scss */
 body.bp {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -550,14 +572,14 @@ form.bp form.inline p {
   margin-bottom: 0;
 }
 
-/* line 38, ../../sass/screen.scss */
+/* line 39, ../../sass/screen.scss */
 body.two-col #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 40, ../../sass/screen.scss */
+/* line 41, ../../sass/screen.scss */
 body.two-col #header, body.two-col #footer {
   display: inline;
   float: left;
@@ -568,7 +590,7 @@ body.two-col #header, body.two-col #footer {
 * html body.two-col #header, * html body.two-col #footer {
   overflow-x: hidden;
 }
-/* line 42, ../../sass/screen.scss */
+/* line 43, ../../sass/screen.scss */
 body.two-col #sidebar {
   display: inline;
   float: left;
@@ -579,7 +601,7 @@ body.two-col #sidebar {
 * html body.two-col #sidebar {
   overflow-x: hidden;
 }
-/* line 46, ../../sass/screen.scss */
+/* line 47, ../../sass/screen.scss */
 body.two-col #content {
   display: inline;
   float: left;

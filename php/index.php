@@ -8,10 +8,16 @@
   <![endif]-->
 </head>
 <body>
-	<div id="wrap">
+<div id="header">
+		<div id="logo">Skip the bus</div>
 <div id="sms">
-	SMS 'now' or 'today' to 347-705-SKIP (347-705-7547) to see how many trips are departing now or today!
+	<p>SMS 'now' or 'today' to 347-705-SKIP (347-705-7547)<br/>to see how many trips are departing now or today!</p>
 </div>
+</div>
+
+	<div id="wrap">
+
+
 
 <div id="forms">
 <form name="form1" method="post" action="register.php">
