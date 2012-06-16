@@ -71,7 +71,7 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
       	{ 
-      		echo "<a href='contact.php?type=leave&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ." Notes:". $row['note'];
+      		echo "<a href='contact.php?type=leave&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes:". $row['note'] . "</div>";
       		if ($row['car']) 
 				echo " (Has a car)";
       		echo "<BR>";
@@ -81,7 +81,7 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
       }
     }
 
-echo $rowbig['homedate'] . " " . $rowbig['hometime'] . "<BR>";
+echo "<div class='trip'>" . $rowbig['homedate'] . " " . $rowbig['hometime'] . "</div>";
    
 // check for other homes that match
 	if ($leave_t == "Flexible") 
@@ -101,7 +101,7 @@ else {
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
       	{ 
-      		echo "<a href='contact.php?type=home&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ." Notes:". $row['note'];  
+      		echo "<a href='contact.php?type=home&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes:". $row['note'] ."</div>";  
 			if ($row['car']) 
 				echo " (Has a car)";
       		echo "<BR>";
