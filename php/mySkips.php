@@ -6,6 +6,7 @@ if(!isset($_SESSION['myusername'])){
 	header("location:index.php");
 }
 
+date_default_timezone_set('America/New_York');
 
 $host=$_ENV['OPENSHIFT_DB_HOST']; // Host name 
 $username="admin"; // Mysql username 
@@ -51,7 +52,7 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
     $lng2 = $lng + $lngrange;    
 
    echo "<li class='result'><div class='trip'>Trip to: <span class='destination'>". $rowbig['destination'] . "</span><BR>";
-   echo "<span class='date'>" . $rowbig['leavedate'] . " " . $rowbig['leavetime'] . "</span></div>";
+   echo "<span class='date'>" . date('F j, Y', strtotime($rowbig['leavedate'])) . " " . $rowbig['leavetime'] . "</span></div>";
    
 // check for other leaves that match
     if ($leave_t == "Flexible") 
@@ -71,17 +72,17 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
       	{ 
-      		echo "<a href='contact.php?type=leave&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes: ". $row['note'] . "</div>";
+      		echo "<div class='req'><a href='contact.php?type=leave&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes: ". $row['note'] . "</div>";
       		if ($row['car']) 
 				echo " (Has a car)";
-      		echo "<BR>";
+      		echo "</div>";
       			
       	}
     
       }
     }
 
-echo "<div class='trip'>" . $rowbig['homedate'] . " " . $rowbig['hometime'] . "</div>";
+echo "<div class='trip'><span class='date'>" . date('F j, Y', strtotime($rowbig['homedate'])) . " " . $rowbig['hometime'] . "</span></div>";
    
 // check for other homes that match
 	if ($leave_t == "Flexible") 
@@ -101,10 +102,10 @@ else {
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
       	{ 
-      		echo "<a href='contact.php?type=home&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes: ". $row['note'] ."</div>";  
+      		echo "<div class='req'><a href='contact.php?type=home&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes: ". $row['note'] ."</div>";  
 			if ($row['car']) 
 				echo " (Has a car)";
-      		echo "<BR>";
+      		echo "</div>";
       	}
       }
     }
@@ -124,7 +125,7 @@ function distance($lt1, $ln1, $lt2, $ln2) {
 ?>
 </ul>
 <div id="add-trip">
-Add a trip:
+<h3>Add a trip:</h3>
 <form name="form" method="post" action="addTrip.php">
 Full address in the Hamptons: <input name="dest" type="text" id="dest"> <BR>
 Departure Date: <input name="leave_d" type="text" id="leave_d"> <BR> 
