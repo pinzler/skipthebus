@@ -1,0 +1,76 @@
+
+
+<html>
+<head>
+	<link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="css/print.css" media="print" rel="stylesheet" type="text/css" />
+  <link href="css/ui-lightness/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+	  <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+</head>
+<body>
+<div id="header">
+		<div id="logo">Skip the bus</div>
+<div id="sms">
+	<p>SMS 'now' or 'today' to 347-705-SKIP (347-705-7547)<br/>to see how many trips are departing now or today!</p>
+</div>
+<div id="description">
+	<p>Sick of the riding Jitney? Want to meet fun and exciting people going to the Hamptons?<br/>Have a car with a few seats to spare? Sign up here to pair up with other New Yorkers headed up north and <span class='bold'>skip the bus!</span></p>
+</div>
+</div>
+
+	<div id="wrap">
+
+
+
+<h3>Welcome marissalerer@gmail.com!</h3><BR>Trip to: 698 West End Ave, new york, ny<BR>2012-06-16 Flexible<BR>Leave matches:<BR><a href='contact.php?type=leave&id=1'>Request contact</a> : 789 West End Ave, NY, NY <BR><a href='contact.php?type=leave&id=2'>Request contact</a> : 789 West End Ave, NY, NY I like summer<BR>2012-06-17 Morning<BR> Home matches:<BR><a href='contact.php?type=home&id=1'>Request contact</a> : 789 West End Ave, NY, NY <BR><a href='contact.php?type=home&id=2'>Request contact</a> : 789 West End Ave, NY, NY I like summer<BR>Trip to: 688 West End Ave, new york, ny<BR>2012-06-16 Evening<BR>Leave matches:<BR>2012-06-17 Morning<BR> Home matches:<BR><BR>
+
+<div id="add-trip">
+Add a trip:
+<form name="form" method="post" action="addTrip.php">
+Address in the Hamptons: <input name="dest" type="text" id="dest"> <BR>
+Departure Date: <input name="leave_d" type="text" id="leave_d"> <BR> 
+Departure Time: <select name="leave_t" id="leave_t"> 
+<option value="Morning">Morning</option>
+<option value="Afternoon">Afternoon</option>
+<option value="Evening">Evening</option>
+<option value="Fringe">Fringe</option>
+<option value="Flexible">Flexible</option>
+</select><BR>
+Return Date: <input name="home_d" type="text" id="home_d"><BR>
+Return Time: <select name="home_t" id="home_t">
+<option value="Morning">Morning</option>
+<option value="Afternoon">Afternoon</option>
+<option value="Evening">Evening</option>
+<option value="Fringe">Late Night</option>
+<option value="Flexible">Flexible</option>
+</select><BR>
+Distance from address you are willing to travel (miles): <input name="radius" type="text" id="radius"><BR>
+Do you own a car or are you planning on renting one? <select name="car" id="car">
+<option value="No">No</option>
+<option value="Yes">Yes</option>
+</select><BR>
+Notes: <input name="note" type="text" id="note"> <BR> 
+<input type="submit" name="Submit" value="Add trip!">
+
+</form>
+</div>
+
+
+</div>
+<div id="footer"></div>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+
+<script>
+	$(function() {
+		$( "#leave_d" ).datepicker({autoSize: false, dateFormat: "yy-mm-dd"});
+		$( "#home_d" ).datepicker({autoSize: false, dateFormat: "yy-mm-dd"});
+	});
+</script>
+
+</body>
+</html>
+

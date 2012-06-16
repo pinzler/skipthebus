@@ -24,9 +24,10 @@ body{
 
 #footer{
 	background:url('../images/sign.png') no-repeat;
+	background-position:bottom right;
 	height:106px;
 	width:100%;
-	position:absolute;
+	position:fixed;
 	bottom:0;
 }
 
@@ -35,9 +36,16 @@ body{
 #header{
 	position:relative;
 	background:url('../images/helicopter2.gif') no-repeat;
-	background-position:100px 50px;
+	background-position:150px 30px;
 	#logo{
 		@include replace-text-with-dimensions('logo.png')
+	}
+
+	.cloud{
+		@include replace-text-with-dimensions('cloud.png');
+		position:absolute;
+		top:0;
+		left:300px;
 	}
 
 	#sms{
@@ -78,7 +86,7 @@ body{
 #wrap{
 	// width:940px;
 	// margin:0 auto;
-	padding-top:20px;
+	padding:20px 0 40px 0;
 	margin-left:150px;
 
 	#forms{
@@ -128,6 +136,17 @@ body{
 		}
 	}
 
+}
+
+#ui-datepicker-div {
+    font-size:10px;
+}
+
+#add-trip{
+	background:white;
+	border:1px solid $green;
+	width:600px;
+	padding:10px;
 }
 
 
