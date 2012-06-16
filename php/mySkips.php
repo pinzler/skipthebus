@@ -71,7 +71,7 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
       	{ 
-      		echo "<a href='contact.php?type=leave&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes:". $row['note'] . "</div>";
+      		echo "<a href='contact.php?type=leave&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes: ". $row['note'] . "</div>";
       		if ($row['car']) 
 				echo " (Has a car)";
       		echo "<BR>";
@@ -101,7 +101,7 @@ else {
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
       	{ 
-      		echo "<a href='contact.php?type=home&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes:". $row['note'] ."</div>";  
+      		echo "<a href='contact.php?type=home&id=" . $row['id'] . "'>Request contact</a> : " . $row['destination'] ."<div class='notes'>Notes: ". $row['note'] ."</div>";  
 			if ($row['car']) 
 				echo " (Has a car)";
       		echo "<BR>";
@@ -126,7 +126,7 @@ function distance($lt1, $ln1, $lt2, $ln2) {
 <div id="add-trip">
 Add a trip:
 <form name="form" method="post" action="addTrip.php">
-Address in the Hamptons: <input name="dest" type="text" id="dest"> <BR>
+Full address in the Hamptons: <input name="dest" type="text" id="dest"> <BR>
 Departure Date: <input name="leave_d" type="text" id="leave_d"> <BR> 
 Departure Time: <select name="leave_t" id="leave_t"> 
 <option value="Morning">Morning</option>
