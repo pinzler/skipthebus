@@ -36,7 +36,8 @@ else $tofrom = "to";
 
 $subject = 'Skip The Bus Request for Contact';
 $message = 'Skip the Bus user, '.$email.', has an overlapping trip '. $tofrom . ' ' . $dest .' and has requested contact with you.  Please feel free to e-mail the user back. - SkipTheBus.com';
-$headers = 'From: skipthebus@skipthebus.com'; 
+$header = "From: SkipTheBus <no-reply@skipthebus.com>\n";
+$header .= "Reply-To: ".$email."\n";
 
 mail($to, $subject, $message, $headers);
 
