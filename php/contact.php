@@ -9,7 +9,7 @@ if(!isset($_SESSION['myusername'])){
 
 
 $host=$_ENV['OPENSHIFT_DB_HOST']; // Host name 
-$username="admin"; // Mysql username 
+$username = "admin"; // Mysql username 
 $password="a4J83Khlc59W"; // Mysql password 
 $db_name="skipthebus"; // Database name 
 $tbl_name="trips"; // Table name 
@@ -31,6 +31,7 @@ while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
     $to=$row['email'];
     $dest=$row['destination'];
 }
+
 if ($type=="home") $tofrom = "from";
 else $tofrom = "to";
 
