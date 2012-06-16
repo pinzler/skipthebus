@@ -12,6 +12,7 @@
 <body>
 <div id="header">
 		<div id="logo">Skip the bus</div>
+		<div class="cloud">Cloud</div>
 <div id="sms">
 	<p>SMS 'now' or 'today' to 347-705-SKIP (347-705-7547)<br/>to see how many trips are departing now or today!</p>
 </div>
@@ -24,8 +25,7 @@
 
 
 
-<h3>Welcome marissalerer@gmail.com!</h3><BR>Trip to: 698 West End Ave, new york, ny<BR>2012-06-16 Flexible<BR>Leave matches:<BR><a href='contact.php?type=leave&id=1'>Request contact</a> : 789 West End Ave, NY, NY <BR><a href='contact.php?type=leave&id=2'>Request contact</a> : 789 West End Ave, NY, NY I like summer<BR>2012-06-17 Morning<BR> Home matches:<BR><a href='contact.php?type=home&id=1'>Request contact</a> : 789 West End Ave, NY, NY <BR><a href='contact.php?type=home&id=2'>Request contact</a> : 789 West End Ave, NY, NY I like summer<BR>Trip to: 688 West End Ave, new york, ny<BR>2012-06-16 Evening<BR>Leave matches:<BR>2012-06-17 Morning<BR> Home matches:<BR><BR>
-
+<h3>Welcome marissalerer@gmail.com!</h3><ul><li class='result'>Trip to: <span class='destination'>698 West End Ave, new york, ny</span><BR><span class='date'>2012-06-16 Flexible</span><BR><h1>Matching trips to the Hamptons:</h1><a href='contact.php?type=leave&id=1'>Request contact</a> : 789 West End Ave, NY, NY Notes:<BR><a href='contact.php?type=leave&id=2'>Request contact</a> : 789 West End Ave, NY, NY Notes:I like summer<BR>2012-06-17 Morning<BR> <h1>Matching trips from the Hamptons:</h1><BR><a href='contact.php?type=home&id=1'>Request contact</a> : 789 West End Ave, NY, NY Notes:<BR><a href='contact.php?type=home&id=2'>Request contact</a> : 789 West End Ave, NY, NY Notes:I like summer<BR></li><li class='result'>Trip to: <span class='destination'>688 West End Ave, new york, ny</span><BR><span class='date'>2012-06-16 Evening</span><BR><h1>Matching trips to the Hamptons:</h1>2012-06-17 Morning<BR> <h1>Matching trips from the Hamptons:</h1><BR></li></ul>
 <div id="add-trip">
 Add a trip:
 <form name="form" method="post" action="addTrip.php">
@@ -57,10 +57,8 @@ Notes: <input name="note" type="text" id="note"> <BR>
 </form>
 </div>
 
-
 </div>
 <div id="footer"></div>
-
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
 
