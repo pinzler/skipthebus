@@ -56,9 +56,12 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
    echo "Leave matches:<BR>";
 
 // check for other leaves that match
-
-    $query = "select * from $tbl_name where email <> '$email' and leavedate = '$leave_d' and leavetime ='$leave_t' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
-	$result=mysql_query($query);
+    if ($leave_t == "Flexible") 
+      $query = "select * from $tbl_name where email <> '$email' and leavedate = '$leave_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+	  else
+      $query = "select * from $tbl_name where email <> '$email' and leavedate = '$leave_d' and leavetime ='$leave_t' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+    
+    $result=mysql_query($query);
     
 	
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
@@ -78,7 +81,10 @@ echo $rowbig['homedate'] . " " . $rowbig['hometime'] . "<BR>";
    
 echo " Home matches:<BR>";
 // check for other homes that match
-	$query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' and hometime ='$home_t' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+	if ($leave_t == "Flexible") 
+    $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+  else
+    $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' and hometime ='$home_t' OR hometime = 'Flexible' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
 	$result=mysql_query($query);
     
 	
@@ -115,16 +121,18 @@ Departure Time: <select name="leave_t" id="leave_t">
 <option value="Afternoon">Afternoon</option>
 <option value="Evening">Evening</option>
 <option value="Fringe">Fringe</option>
+<option value="Flexible">Flexible</option>
 </select><BR>
 Return Date: <input name="home_d" type="text" id="home_d"><BR>
 Return Time: <select name="home_t" id="home_t">
 <option value="Morning">Morning</option>
 <option value="Afternoon">Afternoon</option>
 <option value="Evening">Evening</option>
-<option value="Fringe">Fringe</option>
+<option value="Fringe">Late Night</option>
+<option value="Flexible">Flexible</option>
 </select><BR>
 Distance from address you are willing to travel (miles): <input name="radius" type="text" id="radius"><BR>
-Will you have a car? <select name="car" id="car">
+Do you own a car or are you planning on renting one? <select name="car" id="car">
 <option value="No">No</option>
 <option value="Yes">Yes</option>
 </select><BR>

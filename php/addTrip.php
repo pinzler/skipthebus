@@ -15,14 +15,12 @@ $AuthToken = "3991617f97278e11876af817f21f0a33";
 // Instantiate a new Twilio Rest Client
 $client = new Services_Twilio($AccountSid, $AuthToken);
 
-
 $host=$_ENV['OPENSHIFT_DB_HOST']; // Host name 
 $username="admin"; // Mysql username 
 $password="a4J83Khlc59W"; // Mysql password 
 $db_name="skipthebus"; // Database name 
 $tbl_name="trips"; // Table name 
 $tbl_members="members"; // Table name 
-
 
 // Connect to server and select databse.
 mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
@@ -41,6 +39,7 @@ if(is_array($jsondata )&& $jsondata ['Status']['code']==200)
       $lat = $jsondata ['Placemark'][0]['Point']['coordinates'][1];
       $lng = $jsondata ['Placemark'][0]['Point']['coordinates'][0];
 }
+
 $leave_d=$_REQUEST['leave_d'];
 $leave_t=$_REQUEST['leave_t'];
 $home_d=$_REQUEST['home_d'];
@@ -50,7 +49,7 @@ $car=$_REQUEST['car'];
 $note=$_REQUEST['note'];
 
 
-	$half_mile_lat = 1/69.172; 
+	  $half_mile_lat = 1/69.172; 
     $half_mile_lng = 1/(cos($lat)*69.172);
     if ($half_mile_lng < 0) $half_mile_lng = $half_mile_lng * -1.0;
     
@@ -64,9 +63,11 @@ $note=$_REQUEST['note'];
     $lng2 = $lng + $lngrange;    
 
 // check for other leaves that match
-
-    $query = "select * from $tbl_name where email<>'$email' and leavedate = '$leave_d' and leavetime ='$leave_t' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
-	$result=mysql_query($query);
+    if ($leave_t == "Flexible") 
+      $query = "select * from $tbl_name where email<>'$email' and leavedate = '$leave_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+    else
+      $query = "select * from $tbl_name where email<>'$email' and leavedate = '$leave_d' and leavetime ='$leave_t' OR leavetime = 'Flexible' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+	  $result=mysql_query($query);
     
 	
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
@@ -74,9 +75,9 @@ $note=$_REQUEST['note'];
       	{ 
       		$tempEM = $row['email'];
       		$query = "select phone from $tbl_members where email = '$tempEM'";
-			$res=mysql_query($query);
-			$rw = mysql_fetch_array($res, MYSQL_ASSOC);
-      		sendSMS($rw['phone'], false, $client);
+    			$res=mysql_query($query);
+    			$rw = mysql_fetch_array($res, MYSQL_ASSOC);
+          sendSMS($rw['phone'], false, $client);
       	}
     
       }
@@ -85,8 +86,12 @@ $note=$_REQUEST['note'];
 
 
 // check for other homes that match
-	$query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' and hometime ='$home_t' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
-	$result=mysql_query($query);
+	if ($home_t == "Flexible") 
+    $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+	else
+    $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' and hometime ='$home_t' OR hometime = 'Flexible' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
+  
+  $result=mysql_query($query);
     
 	
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
@@ -134,7 +139,7 @@ function distance($lt1, $ln1, $lt2, $ln2) {
 	return $miles;
 } 
 
-function curl($url){
+function curl($url) {
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
@@ -146,4 +151,3 @@ function curl($url){
 
 ?>
 
-?>
