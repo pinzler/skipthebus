@@ -33,7 +33,7 @@ if ($type=="home") $tofrom = "from";
 else $tofrom = "to";
 
 $subject = 'Skip The Bus Request for Contact';
-$message = 'Skip the Bus user, '.$email.', has an overlapping trip '. $tofrom . ' ' . $dest .' and has requested contact with you.  Please feel free to e-mail the user back. - SkipTheBus.com';
+$message = 'Skip the Bus user, '.$email.', has an overlapping trip near your trip '. $tofrom . ' ' . $dest .' and has requested contact with you.  Please feel free to e-mail the user back. - SkipTheBus.com';
 $header  = "Reply-To: ".$email."\n";
 
 mail($to, $subject, $message, $headers);
