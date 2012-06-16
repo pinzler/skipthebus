@@ -41,6 +41,8 @@ header("location:mySkips.php");
 
 }
 else {
-echo "Username already exists. Go back.";
+	include "header.php";
+echo "Username already exists. Go <a href='index.php'>back</a>.";
+include "footer.php";
 }
 ?>

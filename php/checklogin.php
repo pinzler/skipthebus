@@ -34,6 +34,8 @@ $_SESSION["myusername"] = $myusername;
 header("location:mySkips.php");
 }
 else {
-echo "Wrong Username or Password. Go back.";
+	include "header.php";
+	echo "Wrong Username or Password. Go <a href='index.php'>back</a>.";
+	include "footer.php";
 }
 ?>
