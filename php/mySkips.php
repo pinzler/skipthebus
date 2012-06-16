@@ -180,7 +180,7 @@ function distance($lt1, $ln1, $lt2, $ln2) {
 
     <tr> 
       <td class="label">Do you own a car or are you planning on renting one?</td> 
-      <td><span class="divider"> </span></td>
+      <td><span class="divider"> : </span></td>
       <td> 
         <select name="car" id="car">
           <option value="No">No</option>

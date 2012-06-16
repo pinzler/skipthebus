@@ -25,33 +25,79 @@
 
 
 
-<h3>Welcome marissalerer@gmail.com!</h3><ul><li class='result'><div class='trip'>Trip to: <span class='destination'>698 West End Ave, new york, ny</span><BR><span class='date'>June 16, 2012 Flexible</span></div><h1>Matching trips to the Hamptons:</h1><div class='req'><a href='contact.php?type=leave&id=1'>Request contact</a> : 789 West End Ave, NY, NY<div class='notes'>Notes: </div></div><div class='req'><a href='contact.php?type=leave&id=2'>Request contact</a> : 789 West End Ave, NY, NY<div class='notes'>Notes: I like summer</div></div><div class='trip'><span class='date'>June 17, 2012 Morning</span></div> <h1>Matching trips from the Hamptons:</h1><BR><div class='req'><a href='contact.php?type=home&id=1'>Request contact</a> : 789 West End Ave, NY, NY<div class='notes'>Notes: </div></div><div class='req'><a href='contact.php?type=home&id=2'>Request contact</a> : 789 West End Ave, NY, NY<div class='notes'>Notes: I like summer</div></div></li><li class='result'><div class='trip'>Trip to: <span class='destination'>688 West End Ave, new york, ny</span><BR><span class='date'>June 16, 2012 Evening</span></div><h1>No matching trips to the Hamptons</h1><div class='trip'><span class='date'>June 17, 2012 Morning</span></div> <h1>No matching trips from the Hamptons</h1><BR></li></ul>
+<h3>Welcome marissalerer@gmail.com!</h3><ul><li class='result'><div class='trip'>Trip to: <span class='destination'>698 West End Ave, new york, ny</span><BR><span class='date'>June 16, 2012 Flexible</span></div><h1>Matching trips to the Hamptons:</h1><div class='req'><a href='contact.php?type=leave&id=1'>Request contact</a> : 789 West End Ave, NY, NY<div class='notes'>Notes: </div></div><div class='req'><a href='contact.php?type=leave&id=2'>Request contact</a> : 79 West End Ave, NY, NY<div class='notes'>Notes: I like summer</div></div><div class='trip'><span class='date'>June 17, 2012 Morning</span></div> <h1>Matching trips from the Hamptons:</h1><BR><div class='req'><a href='contact.php?type=home&id=1'>Request contact</a> : 789 West End Ave, NY, NY<div class='notes'>Notes: </div></div><div class='req'><a href='contact.php?type=home&id=2'>Request contact</a> : 79 West End Ave, NY, NY<div class='notes'>Notes: I like summer</div></div></li><li class='result'><div class='trip'>Trip to: <span class='destination'>688 West End Ave, new york, ny</span><BR><span class='date'>June 16, 2012 Evening</span></div><h1>No matching trips to the Hamptons</h1><div class='trip'><span class='date'>June 17, 2012 Morning</span></div> <h1>No matching trips from the Hamptons</h1><BR></li></ul>
 <div id="add-trip">
 <h3>Add a trip:</h3>
 <form name="form" method="post" action="addTrip.php">
-Full address in the Hamptons: <input name="dest" type="text" id="dest"> <BR>
-Departure Date: <input name="leave_d" type="text" id="leave_d"> <BR> 
-Departure Time: <select name="leave_t" id="leave_t"> 
-<option value="Morning">Morning</option>
-<option value="Afternoon">Afternoon</option>
-<option value="Evening">Evening</option>
-<option value="Fringe">Fringe</option>
-<option value="Flexible">Flexible</option>
-</select><BR>
-Return Date: <input name="home_d" type="text" id="home_d"><BR>
-Return Time: <select name="home_t" id="home_t">
-<option value="Morning">Morning</option>
-<option value="Afternoon">Afternoon</option>
-<option value="Evening">Evening</option>
-<option value="Fringe">Late Night</option>
-<option value="Flexible">Flexible</option>
-</select><BR>
-Distance from address you are willing to travel (miles): <input name="radius" type="text" id="radius"><BR>
-Do you own a car or are you planning on renting one? <select name="car" id="car">
-<option value="No">No</option>
-<option value="Yes">Yes</option>
-</select><BR>
-Notes: <input name="note" type="text" id="note"> <BR> 
+  <table>
+    <tr> 
+      <td class="label">Full address in the Hamptons<br/><span class="sample">(111 Main Street, East Hampton, NY)</span></td> 
+      <td><span class="divider">:</span></td>
+      <td><input name="dest" type="text" id="dest"></td>
+    </tr>
+
+    <tr> 
+      <td class="label">Departure Date</td> 
+      <td><span class="divider">:</span></td>
+      <td><input name="leave_d" type="text" id="leave_d"></td>
+    </tr>
+
+    <tr> 
+      <td class="label">Departure Time</td> 
+      <td><span class="divider">:</span></td>
+      <td><select name="leave_t" id="leave_t">
+          <option value="Morning">Morning</option>
+          <option value="Afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+          <option value="Fringe">Fringe</option>
+          <option value="Flexible">Flexible</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr> 
+      <td class="label">Return Date</td> 
+      <td><span class="divider">:</span></td>
+      <td><input name="home_d" type="text" id="home_d"></td>
+    </tr>
+
+    <tr> 
+      <td class="label">Departure Time</td> 
+      <td><span class="divider">:</span></td>
+      <td><select name="home_t" id="home_t">
+          <option value="Morning">Morning</option>
+          <option value="Afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+          <option value="Fringe">Fringe</option>
+          <option value="Flexible">Flexible</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr> 
+      <td class="label">Distance from destination you are willing to travel (miles)</td> 
+      <td><span class="divider">:</span></td>
+      <td><input name="radius" type="text" id="radius"></td>
+    </tr>
+
+    <tr> 
+      <td class="label">Do you own a car or are you planning on renting one?</td> 
+      <td><span class="divider"> : </span></td>
+      <td> 
+        <select name="car" id="car">
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr> 
+      <td class="label">Notes</td> 
+      <td><span class="divider">:</span></td>
+      <td><input name="note" type="textarea" id="note"></td>
+    </tr>
+
+</table>
 <input type="submit" name="Submit" value="Add trip!">
 
 </form>
@@ -71,4 +117,3 @@ Notes: <input name="note" type="text" id="note"> <BR>
 
 </body>
 </html>
-

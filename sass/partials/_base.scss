@@ -156,6 +156,40 @@ h3{
 	border:1px solid $green;
 	width:600px;
 	padding:10px;
+
+	form{
+
+		text-align:right;
+
+		input {
+			width:180px !important;
+		}
+
+		input[type='submit']{
+			// @include sassy-button;
+			width:auto !important;
+		}
+
+		td{
+			vertical-align:top;
+			padding:3px 0;
+		}
+		.label{
+			width:400px;
+			text-align:right;
+		}
+
+		.sample{
+			font-family:Georgia, "Times New Roman", Times, serif;
+			color:#ccc;
+			font-style:italic;
+			font-weight:normal;
+		}
+
+		.divider{
+			padding:0 10px;
+		}
+	}
 }
 
 .result{
