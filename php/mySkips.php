@@ -52,8 +52,7 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
 
    echo "<li class='result'>Trip to: <span class='destination'>". $rowbig['destination'] . "</span><BR>";
    echo "<span class='date'>" . $rowbig['leavedate'] . " " . $rowbig['leavetime'] . "</span><BR>";
-   echo "<h1>Matching trips to the Hamptons:</h1>";
-
+   
 // check for other leaves that match
     if ($leave_t == "Flexible") 
       $query = "select * from $tbl_name where email <> '$email' and leavedate = '$leave_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
@@ -61,7 +60,13 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
       $query = "select * from $tbl_name where email <> '$email' and leavedate = '$leave_d' and (leavetime ='$leave_t' OR leavetime = 'Flexible') AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
     
     $result=mysql_query($query);
-    
+    $count=mysql_num_rows($result);
+
+    if ($count == 0)
+        echo "<h1>No matching trips to the Hamptons</h1>";
+ else {
+    echo "<h1>Matching trips to the Hamptons:</h1>";
+ 
 	
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
@@ -74,19 +79,25 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
       	}
     
       }
-
+    }
 
 echo $rowbig['homedate'] . " " . $rowbig['hometime'] . "<BR>";
    
-echo " <h1>Matching trips from the Hamptons:</h1><BR>";
 // check for other homes that match
 	if ($leave_t == "Flexible") 
     $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
   else
     $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' and (hometime ='$home_t' OR hometime = 'Flexible') AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
 	$result=mysql_query($query);
-    
-	
+   
+$count=mysql_num_rows($result);
+
+    if ($count == 0)
+        echo " <h1>No matching trips from the Hamptons</h1><BR>";
+      
+else {
+	echo " <h1>Matching trips from the Hamptons:</h1><BR>";
+
     while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
       if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
       	{ 
@@ -96,6 +107,7 @@ echo " <h1>Matching trips from the Hamptons:</h1><BR>";
       		echo "<BR>";
       	}
       }
+    }
       echo "</li>";
 }
 
