@@ -50,8 +50,8 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
     $lng1 = $lng - $lngrange;  
     $lng2 = $lng + $lngrange;    
 
-   echo "<li class='result'>Trip to: <span class='destination'>". $rowbig['destination'] . "</span><BR>";
-   echo "<span class='date'>" . $rowbig['leavedate'] . " " . $rowbig['leavetime'] . "</span><BR>";
+   echo "<li class='result'><div class='trip'>Trip to: <span class='destination'>". $rowbig['destination'] . "</span><BR>";
+   echo "<span class='date'>" . $rowbig['leavedate'] . " " . $rowbig['leavetime'] . "</span></div>";
    
 // check for other leaves that match
     if ($leave_t == "Flexible") 
