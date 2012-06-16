@@ -51,7 +51,7 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
     $lng2 = $lng + $lngrange;    
 
    echo "<li class='result'>Trip to: <span class='destination'>". $rowbig['destination'] . "</span><BR>";
-   echo "<span class='date'>"$rowbig['leavedate'] . " " . $rowbig['leavetime'] . "</span><BR>";
+   echo "<span class='date'>" . $rowbig['leavedate'] . " " . $rowbig['leavetime'] . "</span><BR>";
    echo "<h1>Matching trips to the Hamptons:</h1>";
 
 // check for other leaves that match
