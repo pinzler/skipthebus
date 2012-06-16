@@ -304,17 +304,34 @@ h3 {
   padding: 10px;
 }
 /* line 170, ../../sass/partials/_base.scss */
+.result .notes {
+  font-style: italic;
+  color: grey;
+}
+/* line 175, ../../sass/partials/_base.scss */
 .result .date {
   font-style: italic;
 }
-/* line 174, ../../sass/partials/_base.scss */
+/* line 179, ../../sass/partials/_base.scss */
+.result .trip {
+  background: #b1c818;
+  margin-top: 20px;
+  padding: 3px;
+  color: white;
+}
+/* line 186, ../../sass/partials/_base.scss */
+.result .trip:first-child {
+  margin: 0;
+  border-top: 0px dotted #b1c818;
+}
+/* line 191, ../../sass/partials/_base.scss */
 .result h1 {
-  color: #b1c818;
+  color: black;
   font-family: "Avril";
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
-/* line 181, ../../sass/partials/_base.scss */
+/* line 198, ../../sass/partials/_base.scss */
 .result a {
   text-decoration: none;
   color: #b1c818;

@@ -167,15 +167,32 @@ h3{
 	width:600px;
 	padding:10px;
 
+	.notes{
+		font-style:italic;
+		color:grey;
+	}
+
 	.date{
 		font-style:italic;
 	}
 
+	.trip{
+		background:$green;
+		margin-top:20px;
+		padding:3px;
+		color:white;
+	}
+
+	.trip:first-child{
+		margin:0;
+		border-top:0px dotted $green;
+	}
+
 	h1{
-		color:$green;
+		color:black;
 		font-family:"Avril";
 		font-size:30px;
-		margin-top:20px;
+		margin-top:5px;
 	}
 
 	a{
