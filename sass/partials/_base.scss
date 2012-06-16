@@ -6,6 +6,10 @@
 $blue:#7dd1dd;
 $green:#b1c818;
 
+$default-text-shadow-color: rgba(black, 0.6);
+$default-text-shadow-blur: 1px;
+$default-text-shadow-v-offset: 1px;
+
 // Here is where you can define your constants for your application and to configure the blueprint framework.
 // Feel free to delete these if you want keep the defaults:
 $input-width:100px;
@@ -20,7 +24,7 @@ body{
 
 #footer{
 	background:url('../images/sign.png') no-repeat;
-	height:200px;
+	height:106px;
 	width:100%;
 	position:absolute;
 	bottom:0;
@@ -47,6 +51,26 @@ body{
 			padding:15px 30px 0px 50px;
 		}
 	}	
+
+	#description{
+		position:absolute;
+		right:20px;
+		top:120px;
+		width:590px;
+
+		p{
+			color:grey;
+			// @include single-text-shadow;
+			font-family:Georgia, "Times New Roman", Times, serif;
+			font-size:15px;
+			line-height:24px;
+
+			.bold{
+				font-weight:bold;
+				// color:$green;
+			}
+		}
+	}
 }
 
 #wrap{

@@ -67,7 +67,7 @@ a img {
   src: url('fonts/copperplate_gothic_light-webfont.eot') format('embedded-opentype'), url('fonts/copperplate_gothic_light-webfont.svg') format('svg'), url('fonts/copperplate_gothic_light-webfont.ttf') format('truetype'), url('fonts/copperplate_gothic_light-webfont.woff') format('woff');
 }
 
-/* line 14, ../../sass/partials/_base.scss */
+/* line 18, ../../sass/partials/_base.scss */
 body {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7dd1dd), color-stop(100%, #ffffff));
   background-image: -webkit-linear-gradient(#7dd1dd, #ffffff);
@@ -79,20 +79,20 @@ body {
   font-family: "Copperplate", Arial, Helvetica, sans-serif;
 }
 
-/* line 21, ../../sass/partials/_base.scss */
+/* line 25, ../../sass/partials/_base.scss */
 #footer {
   background: url("../images/sign.png") no-repeat;
-  height: 200px;
+  height: 106px;
   width: 100%;
   position: absolute;
   bottom: 0;
 }
 
-/* line 31, ../../sass/partials/_base.scss */
+/* line 35, ../../sass/partials/_base.scss */
 #header {
   position: relative;
 }
-/* line 33, ../../sass/partials/_base.scss */
+/* line 37, ../../sass/partials/_base.scss */
 #header #logo {
   text-indent: 110%;
   white-space: nowrap;
@@ -103,7 +103,7 @@ body {
   width: 300px;
   height: 207px;
 }
-/* line 37, ../../sass/partials/_base.scss */
+/* line 41, ../../sass/partials/_base.scss */
 #header #sms {
   position: absolute;
   right: 0;
@@ -113,17 +113,35 @@ body {
   color: white;
   font-size: 20px;
 }
-/* line 46, ../../sass/partials/_base.scss */
+/* line 50, ../../sass/partials/_base.scss */
 #header #sms p {
   padding: 15px 30px 0px 50px;
 }
+/* line 55, ../../sass/partials/_base.scss */
+#header #description {
+  position: absolute;
+  right: 20px;
+  top: 120px;
+  width: 590px;
+}
+/* line 61, ../../sass/partials/_base.scss */
+#header #description p {
+  color: grey;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  line-height: 24px;
+}
+/* line 68, ../../sass/partials/_base.scss */
+#header #description p .bold {
+  font-weight: bold;
+}
 
-/* line 52, ../../sass/partials/_base.scss */
+/* line 76, ../../sass/partials/_base.scss */
 #wrap {
   padding-top: 20px;
   margin-left: 150px;
 }
-/* line 59, ../../sass/partials/_base.scss */
+/* line 83, ../../sass/partials/_base.scss */
 #wrap #forms form {
   border-top: 1px solid #b1c818;
   width: 331px;
@@ -204,32 +222,32 @@ body {
   width: 390px;
   height: 250px;
 }
-/* line 69, ../../sass/partials/_base.scss */
+/* line 93, ../../sass/partials/_base.scss */
 #wrap #forms form:first-child {
   margin-right: 50px;
 }
-/* line 73, ../../sass/partials/_base.scss */
+/* line 97, ../../sass/partials/_base.scss */
 #wrap #forms form input {
   width: 180px !important;
 }
-/* line 77, ../../sass/partials/_base.scss */
+/* line 101, ../../sass/partials/_base.scss */
 #wrap #forms form input[type='submit'] {
   width: auto !important;
 }
-/* line 82, ../../sass/partials/_base.scss */
+/* line 106, ../../sass/partials/_base.scss */
 #wrap #forms form .form {
   width: 78px;
   font-weight: bold;
 }
-/* line 87, ../../sass/partials/_base.scss */
+/* line 111, ../../sass/partials/_base.scss */
 #wrap #forms form .divider {
   padding: 0 10px;
 }
-/* line 91, ../../sass/partials/_base.scss */
+/* line 115, ../../sass/partials/_base.scss */
 #wrap #forms form .label {
   text-align: right;
 }
-/* line 96, ../../sass/partials/_base.scss */
+/* line 120, ../../sass/partials/_base.scss */
 #wrap #forms form table {
   padding: 10px;
   background: white;
