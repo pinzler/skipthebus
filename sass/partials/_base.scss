@@ -139,18 +139,13 @@ body{
 }
 
 h3{
+	font-family:"Avril";
 	font-weight:bold;
-	font-size:24px;
+	font-size:36px;
 	margin-bottom:10px;
 }
 
-h1{
-	color:$green;
-	font-family:"Avril";
-	font-size:30px;
-	margin-top:20px;
 
-}
 
 #ui-datepicker-div {
     font-size:10px;
@@ -164,12 +159,24 @@ h1{
 }
 
 .result{
+	font-family:Georgia, "Times New Roman", Times, serif;
 	list-style-type: none;
 	background:white;
 	border:1px solid $green;
 	margin-bottom:20px;
 	width:600px;
 	padding:10px;
+
+	.date{
+		font-style:italic;
+	}
+
+	h1{
+		color:$green;
+		font-family:"Avril";
+		font-size:30px;
+		margin-top:20px;
+	}
 
 	a{
 		text-decoration:none;

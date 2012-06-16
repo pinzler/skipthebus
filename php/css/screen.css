@@ -274,25 +274,18 @@ body {
 
 /* line 141, ../../sass/partials/_base.scss */
 h3 {
+  font-family: "Avril";
   font-weight: bold;
-  font-size: 24px;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
-/* line 147, ../../sass/partials/_base.scss */
-h1 {
-  color: #b1c818;
-  font-family: "Avril";
-  font-size: 30px;
-  margin-top: 20px;
-}
-
-/* line 155, ../../sass/partials/_base.scss */
+/* line 150, ../../sass/partials/_base.scss */
 #ui-datepicker-div {
   font-size: 10px;
 }
 
-/* line 159, ../../sass/partials/_base.scss */
+/* line 154, ../../sass/partials/_base.scss */
 #add-trip {
   background: white;
   border: 1px solid #b1c818;
@@ -300,8 +293,9 @@ h1 {
   padding: 10px;
 }
 
-/* line 166, ../../sass/partials/_base.scss */
+/* line 161, ../../sass/partials/_base.scss */
 .result {
+  font-family: Georgia, "Times New Roman", Times, serif;
   list-style-type: none;
   background: white;
   border: 1px solid #b1c818;
@@ -309,7 +303,18 @@ h1 {
   width: 600px;
   padding: 10px;
 }
+/* line 170, ../../sass/partials/_base.scss */
+.result .date {
+  font-style: italic;
+}
 /* line 174, ../../sass/partials/_base.scss */
+.result h1 {
+  color: #b1c818;
+  font-family: "Avril";
+  font-size: 30px;
+  margin-top: 20px;
+}
+/* line 181, ../../sass/partials/_base.scss */
 .result a {
   text-decoration: none;
   color: #b1c818;
