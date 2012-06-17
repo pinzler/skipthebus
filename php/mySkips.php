@@ -86,7 +86,7 @@ while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
 echo "<div class='trip'><span class='date'>" . date('F j, Y', strtotime($rowbig['homedate'])) . " " . $rowbig['hometime'] . "</span></div>";
    
 // check for other homes that match
-	if ($leave_t == "Flexible") 
+	if ($home_t == "Flexible") 
     $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
   else
     $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' and (hometime ='$home_t' OR hometime = 'Flexible') AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
@@ -149,7 +149,7 @@ function distance($lt1, $ln1, $lt2, $ln2) {
           <option value="Morning">Morning</option>
           <option value="Afternoon">Afternoon</option>
           <option value="Evening">Evening</option>
-          <option value="Fringe">Fringe</option>
+          <option value="Late Night">Late Night</option>
           <option value="Flexible">Flexible</option>
         </select>
       </td>
@@ -168,7 +168,7 @@ function distance($lt1, $ln1, $lt2, $ln2) {
           <option value="Morning">Morning</option>
           <option value="Afternoon">Afternoon</option>
           <option value="Evening">Evening</option>
-          <option value="Fringe">Fringe</option>
+          <option value="Late Night">Late Night</option>
           <option value="Flexible">Flexible</option>
         </select>
       </td>

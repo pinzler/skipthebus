@@ -57,6 +57,11 @@ a img {
   border: none;
 }
 
+a {
+  text-decoration: none;
+  color: #b1c818;
+}
+
 @font-face {
   font-family: "Avril";
   src: url('fonts/arvil_sans-webfont.eot') format('embedded-opentype'), url('fonts/arvil_sans-webfont.svg') format('svg'), url('fonts/arvil_sans-webfont.ttf') format('truetype'), url('fonts/arvil_sans-webfont.woff') format('woff');
@@ -125,7 +130,7 @@ body {
 #header #sms {
   position: absolute;
   right: 0;
-  top: 30px;
+  top: 15px;
   height: 72px;
   background: url("../images/sms.png") no-repeat;
   color: white;
@@ -139,7 +144,7 @@ body {
 #header #description {
   position: absolute;
   right: 20px;
-  top: 120px;
+  top: 95px;
   width: 590px;
 }
 /* line 72, ../../sass/partials/_base.scss */

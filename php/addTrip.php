@@ -77,6 +77,7 @@ $note=$_REQUEST['note'];
       		$query = "select phone from $tbl_members where email = '$tempEM'";
     			$res=mysql_query($query);
     			$rw = mysql_fetch_array($res, MYSQL_ASSOC);
+          echo $rw['phone'];
           sendSMS($rw['phone'], false, $client);
       	}
     
@@ -91,17 +92,17 @@ $note=$_REQUEST['note'];
 	else
     $query = "select * from $tbl_name where email<>'$email' and homedate = '$home_d' and (hometime ='$home_t' OR hometime = 'Flexible') AND lat BETWEEN '$lat1' AND '$lat2' AND lng BETWEEN '$lng1' AND '$lng2'";
   
-  $result=mysql_query($query);
+  $result2=mysql_query($query);
     
 	
-    while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-      if (distance($lat, $lng, $row['lat'], $row['lng']) < $row['radius'])
+    while($row2 = mysql_fetch_array($result2, MYSQL_ASSOC)) {
+      if (distance($lat, $lng, $row2['lat'], $row2['lng']) < $row2['radius'])
       	{ 
-      		$tempEM = $row['email'];
+      		$tempEM = $row2['email'];
       		$query = "select phone from $tbl_members where email = '$tempEM'";
-			$res=mysql_query($query);
-			$rw = mysql_fetch_array($res, MYSQL_ASSOC);
-      		sendSMS($rw['phone'], true, $client);	
+			    $res2=mysql_query($query);
+			    $rw2 = mysql_fetch_array($res2, MYSQL_ASSOC);
+          sendSMS($rw2['phone'], true, $client);	
       	}
       }
 // Mysql_num_row is counting table row
@@ -125,8 +126,7 @@ function sendSMS($number, $isHome, $client) {
 
 	/* Your Twilio Number or Outgoing Caller ID */
 	$from = '3477057547';
-
-	$client->account->sms_messages->create($from, $number, $msg);
+ 	$client->account->sms_messages->create($from, $number, $msg);
  
 }
 

@@ -16,7 +16,11 @@
 	<p>SMS 'now' or 'today' to 347-705-SKIP (347-705-7547)<br/>to see how many trips are departing now or today!</p>
 </div>
 <div id="description">
-	<p>Sick of the riding Jitney? Want to meet fun and exciting people going to the Hamptons?<br/>Have a car with a few seats to spare? Sign up here to pair up with other New Yorkers headed up north and <span class='bold'>skip the bus!</span></p>
+	<p>Sick of the riding Jitney? Want to meet fun and exciting people going to the Hamptons?<br/>
+	   Have a car with a few seats to spare? Sign up here to pair up with other New Yorkers headed east and <span class='bold'>skip the bus!</span><br/>
+	   Enter a trip and we will automatically SMS you when someone else enters matching trip.<br/>
+	   Built in 10 hours during <a href="http://www.hacknjill.com">Hack 'n Jill</a> by <a href="http://www.twitter.com/marissalevy">Marissa Lerer</a> and <a href="http://www.twitter.com/pinzler">Andrew Pinzler</a>.
+	</p>
 </div>
 </div>
 
